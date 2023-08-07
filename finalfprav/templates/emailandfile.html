@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+  <div> 
+    <form action="/emailfile" method="post" enctype="multipart/form-data">
+      {% if issue %}
+         <h6> {{ issue }} </h6>
+      {% endif %}
+      {% if done %}
+            <h6>{{ done }}</h6>
+       {% endif%}
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="formFile" name="formFile">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="Username1" placeholder="Username1" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="Username2" placeholder="Username2" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="Username3" placeholder="Username3" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="Username4" placeholder="Username4" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" name="Username5" placeholder="Username5" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      <br>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </div>
+    </form>   
+  </div>
+{% endblock %}

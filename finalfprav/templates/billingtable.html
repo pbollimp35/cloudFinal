@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <div> 
+    {% for user, file in data.items() %}
+        {{ user }}  --- {{ file }}
+    {% endfor %}
+  </div>
+{% endblock %}

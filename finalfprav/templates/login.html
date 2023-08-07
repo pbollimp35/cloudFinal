@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+  <div> 
+    <form action="/check" method="post">
+      {% if issue %}
+         <h6> {{ issue }} </h6>
+      {% endif %}
+      {% if done %}
+            <h6>{{ done }}</h6>
+       {% endif%}
+      <div class="col-12">
+          <input name="gmail" type="email" class="form-control" id="email" placeholder="Please Enter your email id Here" required>
+        </div>
+      <div class="col-12">
+        <input name="password" type="password" class="form-control" id="pass1" placeholder="Please Enter your password Here" required>
+      </div>
+      <br>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>   
+  </div>
+{% endblock %}
